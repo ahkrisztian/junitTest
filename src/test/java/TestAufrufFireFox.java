@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 import java.net.*;
+import java.time.Duration;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,6 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 import de.codingsolo.selenium.pages.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.http.ClientConfig;
 import org.openqa.selenium.remote.*;
 
 public class TestAufrufFireFox {
@@ -22,7 +25,7 @@ public class TestAufrufFireFox {
 	WebDriver driver;
 	
 	@Before
-	public void initTests() throws MalformedURLException {
+	public void initTests() throws Exception {
 		
 		System.out.println("Initialisiere Webdriver");
 		System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
@@ -30,14 +33,17 @@ public class TestAufrufFireFox {
 		//docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-firefox
 		
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
-		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
+		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
 		
+		driver = new FirefoxDriver();
 		driver.get("https://seleniumkurs.codingsolo.de");
 	}
 	
 	@After
-	public void afterTests() {
-		//driver.close();
+	public void afterTests() throws Exception {
+		driver.close();
+		
+		driver = new FirefoxDriver();
 	}
 	
 	@Test
@@ -52,6 +58,7 @@ public class TestAufrufFireFox {
 		//Assert
 		String statusMeldung = loginPage.statusMeldungAuslesen();
 		assertTrue(statusMeldung.contains("Willkommen"));
+		
 	}
 
 	@Test

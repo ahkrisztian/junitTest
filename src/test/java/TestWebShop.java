@@ -1,3 +1,5 @@
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.*;
 import org.junit.After;
@@ -6,6 +8,9 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 import de.codingsolo.selenium.pages.*;
 
 public class TestWebShop {
@@ -13,10 +18,14 @@ public class TestWebShop {
 	WebDriver driver;
 	
 	@Before
-	public void initTests() {
+	public void initTests() throws Exception {
 		
 		System.out.println("Initialisiere Webdriver");
 		System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+		
+		
+		//FirefoxOptions firefoxOptions = new FirefoxOptions();
+		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
 		
 		driver = new FirefoxDriver();
 		
@@ -25,7 +34,7 @@ public class TestWebShop {
 	
 	@After
 	public void afterTests() {
-		//driver.close();
+		driver.close();
 	}
 	
 	@Test
