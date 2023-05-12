@@ -93,7 +93,7 @@ public class TestAufrufFireFox {
 	}
 	
 	@Test
-	public void seleniumTestForm1_Ausfüllen() {
+	public void seleniumTestForm1_Ausfullen() {
 		//Arrange
 		
 		//Login
