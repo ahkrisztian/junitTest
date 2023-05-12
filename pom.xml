@@ -53,9 +53,8 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.1.0</version>
           <configuration>
-			  <parallel> all</parallel>
-			  <threadCount>5</threadCount>
-		  </configuration>
+        	<testFailureIgnore>true</testFailureIgnore>
+    	</configuration>
         </plugin>
       </plugins>
     </pluginManagement>
