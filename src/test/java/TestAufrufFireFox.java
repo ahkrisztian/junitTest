@@ -118,6 +118,7 @@ public class TestAufrufFireFox {
 		//Firmen hinzufügen
 		testFormPage.firmenUbernehmen();
 		
+		
 		testFormPage.firmaInBox2Auswahlen(2);
 		
 		testFormPage.ausgewahlteFirmenVerschiben();
