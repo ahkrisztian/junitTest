@@ -95,7 +95,7 @@ public class SeleniumTestForm3Test {
 	}
 	
 	@Test
-	public void testFormAusfüllen() {
+	public void testFormAusfullen() {
 		
 		//Arrange
 		SeleniumLoginPage loginPage = new SeleniumLoginPage(driver);
