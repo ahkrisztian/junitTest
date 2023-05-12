@@ -45,7 +45,22 @@
 	      <artifactId>grpc-netty</artifactId>
 	      <version>1.35.0</version>
     </dependency>
-
+    
+    <dependency>
+	  <groupId>io.opentelemetry</groupId>
+	  <artifactId>opentelemetry-api</artifactId>
+	  <version>1.7.0</version>
+	</dependency>
+	<dependency>
+	  <groupId>io.opentelemetry</groupId>
+	  <artifactId>opentelemetry-sdk</artifactId>
+	  <version>1.7.0</version>
+	</dependency>
+	<dependency>
+	  <groupId>io.opentelemetry</groupId>
+	  <artifactId>opentelemetry-exporters-logging</artifactId>
+	  <version>1.7.0</version>
+	</dependency>
 
   </dependencies>
   
