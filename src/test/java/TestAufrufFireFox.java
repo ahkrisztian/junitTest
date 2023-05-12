@@ -108,14 +108,14 @@ public class TestAufrufFireFox {
 		testFormPage.betreffEingeben("Manuell");
 		testFormPage.nameEingeben("Erik");
 		
-		//Kurs auswählen
+		//Kurs auswahlen
 		testFormPage.kursAuswaheln("Java Grundlagen Kurs mit Dieter");
 		
-		//Firmen auswählen
+		//Firmen auswahlen
 		testFormPage.firmaInBoxAuswahlen(new int[] {2,4,6});
 		
 		
-		//Firmen hinzufügen
+		//Firmen hinzufugen
 		testFormPage.firmenUbernehmen();
 		
 		

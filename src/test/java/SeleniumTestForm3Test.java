@@ -153,7 +153,7 @@ public class SeleniumTestForm3Test {
 		//List<Object[]> listObject = Arrays.asList(daten);
 		ApachePOI excelReader = new ApachePOI();
 		
-		List<Object[]> listObject = excelReader.getExcelData("C:\\Users\\lunar\\Downloads\\ApachePOIExample+Lektion+-+166\\datadriven-master\\TestCaseTestform3.xlsx");
+		List<Object[]> listObject = excelReader.getExcelData("./docs/TestCaseTestform3.xlsx");
 		collection = new ArrayList<Object[]>(listObject);
 		
 		return collection;

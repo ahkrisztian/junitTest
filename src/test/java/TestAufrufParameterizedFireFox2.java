@@ -136,14 +136,14 @@ public class TestAufrufParameterizedFireFox2 {
 		testFormPage.betreffEingeben(betreff);
 		testFormPage.nameEingeben(name);
 		
-		//Kurs auswählen
+		//Kurs auswohlen
 		testFormPage.kursAuswaheln(assert2);
 		
-		//Firmen auswählen
+		//Firmen auswohlen
 		testFormPage.firmaInBoxAuswahlen(new int[] {2,4,6});
 		
 		
-		//Firmen hinzufügen
+		//Firmen hinzufugen
 		testFormPage.firmenUbernehmen();
 		
 		testFormPage.firmaInBox2Auswahlen(2);
