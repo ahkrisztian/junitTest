@@ -49,17 +49,17 @@
     <dependency>
 	  <groupId>io.opentelemetry</groupId>
 	  <artifactId>opentelemetry-api</artifactId>
-	  <version>1.9.0</version>
+	  <version>1.7.0</version>
 	</dependency>
 	<dependency>
 	  <groupId>io.opentelemetry</groupId>
 	  <artifactId>opentelemetry-sdk</artifactId>
-	  <version>1.9.0</version>
+	  <version>1.7.0</version>
 	</dependency>
 	<dependency>
 	  <groupId>io.opentelemetry</groupId>
 	  <artifactId>opentelemetry-exporters-logging</artifactId>
-	  <version>0.9.1</version>
+	  <version>0.7.1</version>
 	</dependency>
 
   </dependencies>
