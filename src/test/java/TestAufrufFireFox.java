@@ -32,7 +32,7 @@ public class TestAufrufFireFox {
 		
 		//docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-firefox
 		
-		FirefoxOptions firefoxOptions = new FirefoxOptions();
+		//FirefoxOptions firefoxOptions = new FirefoxOptions();
 		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
 		
 		driver = new FirefoxDriver();
@@ -42,8 +42,7 @@ public class TestAufrufFireFox {
 	@After
 	public void afterTests() throws Exception {
 		driver.close();
-		
-		driver = new FirefoxDriver();
+
 	}
 	
 	@Test
@@ -110,18 +109,18 @@ public class TestAufrufFireFox {
 		testFormPage.nameEingeben("Erik");
 		
 		//Kurs auswählen
-		testFormPage.kursAuswäheln("Java Grundlagen Kurs mit Dieter");
+		testFormPage.kursAuswaheln("Java Grundlagen Kurs mit Dieter");
 		
 		//Firmen auswählen
-		testFormPage.firmaInBoxAuswählen(new int[] {2,4,6});
+		testFormPage.firmaInBoxAuswahlen(new int[] {2,4,6});
 		
 		
 		//Firmen hinzufügen
-		testFormPage.firmenÜbernehmen();
+		testFormPage.firmenUbernehmen();
 		
-		testFormPage.firmaInBox2Auswählen(2);
+		testFormPage.firmaInBox2Auswahlen(2);
 		
-		testFormPage.ausgewählteFirmenVerschiben();
+		testFormPage.ausgewahlteFirmenVerschiben();
 		
 		//Act
 		testFormPage.formularSpeichern();
@@ -233,7 +232,7 @@ public class TestAufrufFireFox {
 		SeleniumHomePage homePage = new SeleniumHomePage(driver);
 		
 		
-		homePage.linkAuswählen(linkName);
+		homePage.linkAuswahlen(linkName);
 	}
 
 }

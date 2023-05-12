@@ -104,7 +104,7 @@ public class SeleniumTestForm3Test {
 				
 		SeleniumHomePage homePage = new SeleniumHomePage(driver);
 								
-		homePage.linkAuswählen("Testform3 DataDriven");
+		homePage.linkAuswahlen("Testform3 DataDriven");
 				
 		SeleniumTestForm3Page testForPage = new SeleniumTestForm3Page(driver);
 				

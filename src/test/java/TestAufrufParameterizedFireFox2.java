@@ -117,7 +117,7 @@ public class TestAufrufParameterizedFireFox2 {
 	}
 	
 	@Test
-	public void seleniumTestForm1_Ausfüllen() {
+	public void seleniumTestForm1_Ausfullen() {
 		//Arrange
 		
 		//Login
@@ -137,18 +137,18 @@ public class TestAufrufParameterizedFireFox2 {
 		testFormPage.nameEingeben(name);
 		
 		//Kurs auswählen
-		testFormPage.kursAuswäheln(assert2);
+		testFormPage.kursAuswaheln(assert2);
 		
 		//Firmen auswählen
-		testFormPage.firmaInBoxAuswählen(new int[] {2,4,6});
+		testFormPage.firmaInBoxAuswahlen(new int[] {2,4,6});
 		
 		
 		//Firmen hinzufügen
-		testFormPage.firmenÜbernehmen();
+		testFormPage.firmenUbernehmen();
 		
-		testFormPage.firmaInBox2Auswählen(2);
+		testFormPage.firmaInBox2Auswahlen(2);
 		
-		testFormPage.ausgewählteFirmenVerschiben();
+		testFormPage.ausgewahlteFirmenVerschiben();
 		
 		//Act
 		testFormPage.formularSpeichern();
@@ -278,7 +278,7 @@ public class TestAufrufParameterizedFireFox2 {
 		SeleniumHomePage homePage = new SeleniumHomePage(driver);
 		
 		
-		homePage.linkAuswählen(linkName);
+		homePage.linkAuswahlen(linkName);
 	}
 	
 	

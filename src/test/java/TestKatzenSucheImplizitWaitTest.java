@@ -41,7 +41,7 @@ public class TestKatzenSucheImplizitWaitTest {
 		loginPage.loginBtnAnClicken();
 		
 		SeleniumHomePage homePage = new SeleniumHomePage(driver);				
-		homePage.linkAuswählen("Katzensuche Testseite (AJAX)");
+		homePage.linkAuswahlen("Katzensuche Testseite (AJAX)");
 		
 		SeleniumKetzenSuchenTest katzenSuche = new SeleniumKetzenSuchenTest(driver);
 		String beschreibung = katzenSuche.beschreibungAuslesen();
@@ -71,7 +71,7 @@ public class TestKatzenSucheImplizitWaitTest {
 		
 		
 		SeleniumHomePage homePage = new SeleniumHomePage(driver);				
-		homePage.linkAuswählen("Katzensuche Testseite (AJAX)");
+		homePage.linkAuswahlen("Katzensuche Testseite (AJAX)");
 		
 		SeleniumKetzenSuchenTest katzenSuche = new SeleniumKetzenSuchenTest(driver);
 		String beschreibung = katzenSuche.beschreibungAuslesen();

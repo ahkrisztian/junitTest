@@ -38,7 +38,7 @@ public class SeleniumHomePage {
 		sideMenuTestAppClick.click();
 	}
 	
-	public void linkAuswählen(String linkName) {
+	public void linkAuswahlen(String linkName) {
 		
 		statusMeldung();
 		menuAusklappen();

@@ -43,7 +43,7 @@ public class SeleniumWebShopTest {
 		inputSuche.sendKeys(artikel);
 	}
 	
-	public void produktAnzhalAuswählen(String text, int anzahl) {
+	public void produktAnzhalAuswahlen(String text, int anzahl) {
 		WebElement btnPlus = driver.findElement(By.xpath(String.format("//*[text() = '%s']/..//*[@class='increment']", text)));
 		
 		for(int i = 1; i < anzahl; i++) {
@@ -64,7 +64,7 @@ public class SeleniumWebShopTest {
 		btnInWarenkorb.click();
 	}
 	
-	public void warenkorbÖffnen() {
+	public void warenkorbOffnen() {
 		btnWarenkorb.click();
 	}
 	

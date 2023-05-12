@@ -53,29 +53,29 @@ public class SeleniumTestFormPage {
 		inputName.sendKeys(name);
 	}
 
-	public void kursAuswäheln(String kursName) {
+	public void kursAuswaheln(String kursName) {
 		
 		Select selectKurs = new Select(this.selectKurs);
 		selectKurs.selectByValue(kursName);
 	}
 	
-	public void firmaInBoxAuswählen(int[] auswahl) {
+	public void firmaInBoxAuswahlen(int[] auswahl) {
 		Select selectFirma = new Select(this.selectFirma);
 		for(int i : auswahl) {
 			selectFirma.selectByIndex(i);
 		}
 	}
 	
-	public void firmenÜbernehmen() {
+	public void firmenUbernehmen() {
 		btnFirmaAuswahl1.click();
 	}
 	
-	public void firmaInBox2Auswählen(int auswahl) {
+	public void firmaInBox2Auswahlen(int auswahl) {
 		Select selectFirma = new Select(this.btnFirmaAuswahlObenBox2);
 		selectFirma.selectByIndex(auswahl);
 	}
 	
-	public void ausgewählteFirmenVerschiben() {
+	public void ausgewahlteFirmenVerschiben() {
 		upButton.click();
 	}
 	

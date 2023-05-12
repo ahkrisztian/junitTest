@@ -48,7 +48,7 @@ public class TestWebShop {
 		
 		//Navigation zum Webshop
 		SeleniumHomePage homePage = new SeleniumHomePage(driver);			
-		homePage.linkAuswählen("Webshop Testseite");
+		homePage.linkAuswahlen("Webshop Testseite");
 		
 		SeleniumWebShopTest webShopTest = new SeleniumWebShopTest(driver);
 		
@@ -59,13 +59,13 @@ public class TestWebShop {
 		webShopTest.btnSucheKlick();
 		
 		//Increment stück
-		webShopTest.produktAnzhalAuswählen("Querlenker Satz Spurstange Audi", 3);
+		webShopTest.produktAnzhalAuswahlen("Querlenker Satz Spurstange Audi", 3);
 		
 		//In Warenkorb	
 		webShopTest.inWarenkorn();
 		
 		//Warenkorb öffnen
-		webShopTest.warenkorbÖffnen();
+		webShopTest.warenkorbOffnen();
 		
 		//Zur Kasse Klick
 		webShopTest.zurKasseKlick();
