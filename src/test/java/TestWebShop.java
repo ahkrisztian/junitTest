@@ -11,6 +11,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import de.codingsolo.selenium.configuration.Config;
+import de.codingsolo.selenium.configuration.DriverHelper;
 import de.codingsolo.selenium.pages.*;
 
 public class TestWebShop {
@@ -20,21 +22,24 @@ public class TestWebShop {
 	@Before
 	public void initTests() throws Exception {
 		
-		System.out.println("Initialisiere Webdriver");
-		System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+		//System.out.println("Initialisiere Webdriver");
+		//System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
 		
 		
 		//FirefoxOptions firefoxOptions = new FirefoxOptions();
 		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
 		
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
 		
-		driver.get("https://seleniumkurs.codingsolo.de");
+		//driver.get("https://seleniumkurs.codingsolo.de");
+		driver = DriverHelper.getDriver("firefox");
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.get(Config.getBaseUrl());
 	}
 	
 	@After
 	public void afterTests() {
-		driver.close();
+		driver.quit();
 	}
 	
 	@Test

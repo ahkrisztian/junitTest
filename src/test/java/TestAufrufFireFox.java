@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import java.net.*;
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
 import org.junit.Before;
@@ -12,6 +13,9 @@ import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+
+import de.codingsolo.selenium.configuration.Config;
+import de.codingsolo.selenium.configuration.DriverHelper;
 import de.codingsolo.selenium.pages.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -27,22 +31,25 @@ public class TestAufrufFireFox {
 	@Before
 	public void initTests() throws Exception {
 		
-		System.out.println("Initialisiere Webdriver");
-		System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+		//System.out.println("Initialisiere Webdriver");
+		//System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
 		
 		//docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-firefox
 		
 		//FirefoxOptions firefoxOptions = new FirefoxOptions();
 		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
 		
-		driver = new FirefoxDriver();
-		driver.get("https://seleniumkurs.codingsolo.de");
+		//driver = new FirefoxDriver();
+		//river.get("https://seleniumkurs.codingsolo.de");
+		
+		driver = DriverHelper.getDriver("firefox");
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.get(Config.getBaseUrl());
 	}
 	
 	@After
 	public void afterTests() throws Exception {
-		driver.close();
-
+		driver.quit();
 	}
 	
 	@Test

@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import de.codingsolo.selenium.configuration.Config;
+import de.codingsolo.selenium.configuration.DriverHelper;
 import de.codingsolo.selenium.pages.SeleniumLoginPage;
 
 public class TestKatzenSucheImplizitWaitTest {
@@ -17,18 +19,22 @@ public class TestKatzenSucheImplizitWaitTest {
 	@Before
 	public void initTests() {
 		
-		System.out.println("Initialisiere Webdriver");
-		System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+		//System.out.println("Initialisiere Webdriver");
+		//System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
 		
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
+		//driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		
+		//driver.get("https://seleniumkurs.codingsolo.de");
+		
+		driver = DriverHelper.getDriver("firefox");
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		
-		driver.get("https://seleniumkurs.codingsolo.de");
+		driver.get(Config.getBaseUrl());
 	}
 	
 	@After
 	public void afterTests() {
-		driver.close();
+		driver.quit();
 	}
 	
 	@Test

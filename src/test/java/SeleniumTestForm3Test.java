@@ -91,7 +91,7 @@ public class SeleniumTestForm3Test {
 	
 	@After
 	public void afterTests() {
-		driver.close();
+		driver.quit();
 	}
 	
 	@Test
