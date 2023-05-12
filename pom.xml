@@ -34,13 +34,20 @@
 	    <version>4.1.2</version>
 	</dependency>
 
-
-
   </dependencies>
   
   <build>
     <pluginManagement>
       <plugins>
+		  <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version> <!-- Update the plugin version to the latest, e.g., 3.8.1 -->
+            <configuration>
+                <source>1.8</source> <!-- Update the source version -->
+                <target>1.8</target> <!-- Update the target version -->
+            </configuration>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
