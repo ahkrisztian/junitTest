@@ -20,7 +20,9 @@ public enum AvailableBrowser {
 			WebDriver driver = null;
 			try {
 				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
-			} catch (MalformedURLException e) {
+				//driver = new FirefoxDriver();
+				return driver;
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -40,9 +42,9 @@ public enum AvailableBrowser {
 			WebDriver driver = null;
 			try {
 				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
-				
+				//driver = new FirefoxDriver();
 				return driver;
-			} catch (MalformedURLException e) {
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
