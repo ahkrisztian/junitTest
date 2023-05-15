@@ -14,20 +14,17 @@ public enum AvailableBrowser {
 		@Override
 		public WebDriver createDriver() {
 			System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
-			//WebDriver driver = new FirefoxDriver();
-			
-			FirefoxOptions firefoxOptions = new FirefoxOptions();
-			RemoteWebDriver driver = null;
-			try {
-				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
-				//driver = new FirefoxDriver();
-				return driver;
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			return driver;
+		    FirefoxOptions firefoxOptions = new FirefoxOptions();
+
+		    try {
+		        return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
+		        //return new FirefoxDriver();
+		    } catch (Exception e) {
+		    	
+		        e.printStackTrace();
+		    }
+
+		    throw new RuntimeException("Failed to create RemoteWebDriver");
 		}
 	},
 	
@@ -36,20 +33,19 @@ public enum AvailableBrowser {
 		@Override
 		public WebDriver createDriver() {
 			System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
-			//WebDriver driver = new FirefoxDriver();
-			
-			FirefoxOptions firefoxOptions = new FirefoxOptions();
-			RemoteWebDriver driver = null;
-			try {
-				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
-				//driver = new FirefoxDriver();
-				return driver;
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			return driver;
+		    FirefoxOptions firefoxOptions = new FirefoxOptions();
+
+		    try {
+		        return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
+		    	//return new FirefoxDriver();
+
+		    } catch (Exception e) {
+		    	
+		        e.printStackTrace();
+		    }
+
+		    
+		    throw new RuntimeException("Failed to create RemoteWebDriver");
 		}
 	};
 	

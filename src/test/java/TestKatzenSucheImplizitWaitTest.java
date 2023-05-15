@@ -34,7 +34,7 @@ public class TestKatzenSucheImplizitWaitTest {
 	
 	@After
 	public void afterTests() {
-		driver.quit();
+		driver.close();
 	}
 	
 	@Test

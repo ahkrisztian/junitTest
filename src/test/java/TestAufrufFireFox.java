@@ -50,7 +50,9 @@ public class TestAufrufFireFox {
 	
 	@After
 	public void afterTests() throws Exception {
-		driver.quit();
+		if(driver != null) {
+			driver.close();
+		}
 	}
 	
 	@Test

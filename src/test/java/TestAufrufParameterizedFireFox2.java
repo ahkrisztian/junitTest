@@ -67,7 +67,7 @@ public class TestAufrufParameterizedFireFox2 {
 	
 	@After
 	public void afterTests() {
-		driver.quit();
+		driver.close();
 	}
 	
 	@Test
