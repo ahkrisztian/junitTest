@@ -1,24 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: TestKatzenSucheImplizitWaitTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.003 s <<< FAILURE! - in TestKatzenSucheImplizitWaitTest
-TestKatzenSucheImplizitWaitTest.testImplizitWait  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestKatzenSucheImplizitWaitTest.initTests(TestKatzenSucheImplizitWaitTest.java:30)
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.017 s <<< FAILURE! - in TestKatzenSucheImplizitWaitTest
+TestKatzenSucheImplizitWaitTest.testImplizitWait  Time elapsed: 0.009 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestKatzenSucheImplizitWaitTest.initTests(TestKatzenSucheImplizitWaitTest.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -49,10 +35,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 45 more
 
-TestKatzenSucheImplizitWaitTest.testImplizitWait  Time elapsed: 0.002 s  <<< ERROR!
+TestKatzenSucheImplizitWaitTest.testImplizitWait  Time elapsed: 0.01 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestKatzenSucheImplizitWaitTest.afterTests(TestKatzenSucheImplizitWaitTest.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -85,23 +69,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestKatzenSucheImplizitWaitTest.testExplizitWait  Time elapsed: 0 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestKatzenSucheImplizitWaitTest.initTests(TestKatzenSucheImplizitWaitTest.java:30)
+TestKatzenSucheImplizitWaitTest.testExplizitWait  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestKatzenSucheImplizitWaitTest.initTests(TestKatzenSucheImplizitWaitTest.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -132,10 +102,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 45 more
 
-TestKatzenSucheImplizitWaitTest.testExplizitWait  Time elapsed: 0.001 s  <<< ERROR!
+TestKatzenSucheImplizitWaitTest.testExplizitWait  Time elapsed: 0.007 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestKatzenSucheImplizitWaitTest.afterTests(TestKatzenSucheImplizitWaitTest.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

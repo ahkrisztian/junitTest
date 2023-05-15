@@ -33,7 +33,7 @@ public class TestWebShop {
 		
 		//driver.get("https://seleniumkurs.codingsolo.de");
 		driver = DriverHelper.getDriver("firefox");
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		driver.get(Config.getBaseUrl());
 	}
 	

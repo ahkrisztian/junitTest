@@ -20,7 +20,7 @@ public class TestKatzenSucheImplizitWaitTest {
 	public void initTests() {
 		
 		//System.out.println("Initialisiere Webdriver");
-		//System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
 		
 		//driver = new FirefoxDriver();
 		//driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);

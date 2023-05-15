@@ -17,7 +17,7 @@ public enum AvailableBrowser {
 			//WebDriver driver = new FirefoxDriver();
 			
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
-			WebDriver driver = null;
+			RemoteWebDriver driver = null;
 			try {
 				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
 				//driver = new FirefoxDriver();
@@ -39,7 +39,7 @@ public enum AvailableBrowser {
 			//WebDriver driver = new FirefoxDriver();
 			
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
-			WebDriver driver = null;
+			RemoteWebDriver driver = null;
 			try {
 				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
 				//driver = new FirefoxDriver();

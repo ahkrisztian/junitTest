@@ -1,24 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: TestWebShop
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in TestWebShop
-TestWebShop.BestellVomWebShop  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestWebShop.initTests(TestWebShop.java:35)
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.007 s <<< FAILURE! - in TestWebShop
+TestWebShop.BestellVomWebShop  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+	at TestWebShop.initTests(TestWebShop.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -49,10 +35,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 45 more
 
-TestWebShop.BestellVomWebShop  Time elapsed: 0.001 s  <<< ERROR!
+TestWebShop.BestellVomWebShop  Time elapsed: 0.007 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestWebShop.afterTests(TestWebShop.java:42)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

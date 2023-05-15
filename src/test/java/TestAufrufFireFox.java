@@ -32,11 +32,12 @@ public class TestAufrufFireFox {
 	public void initTests() throws Exception {
 		
 		//System.out.println("Initialisiere Webdriver");
-		//System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
 		
 		//docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-firefox
 		
 		//FirefoxOptions firefoxOptions = new FirefoxOptions();
+		
 		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
 		
 		//driver = new FirefoxDriver();

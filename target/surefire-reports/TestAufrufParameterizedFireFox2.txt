@@ -1,24 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: TestAufrufParameterizedFireFox2
 -------------------------------------------------------------------------------
-Tests run: 32, Failures: 0, Errors: 32, Skipped: 0, Time elapsed: 0.017 s <<< FAILURE! - in TestAufrufParameterizedFireFox2
-TestAufrufParameterizedFireFox2.testRadioButton[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+Tests run: 32, Failures: 0, Errors: 32, Skipped: 0, Time elapsed: 0.089 s <<< FAILURE! - in TestAufrufParameterizedFireFox2
+TestAufrufParameterizedFireFox2.testRadioButton[Test From 1 Test 1 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -57,10 +43,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.testRadioButton[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.testRadioButton[Test From 1 Test 1 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -101,23 +85,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.navigation_SeleniumTestForm1[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.navigation_SeleniumTestForm1[Test From 1 Test 1 Firefox]  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -156,10 +126,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.navigation_SeleniumTestForm1[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.navigation_SeleniumTestForm1[Test From 1 Test 1 Firefox]  Time elapsed: 0.007 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -200,23 +168,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.testLogin[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.testLogin[Test From 1 Test 1 Firefox]  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -255,10 +209,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.testLogin[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.testLogin[Test From 1 Test 1 Firefox]  Time elapsed: 0.006 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -299,23 +251,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.dragAndDropTest[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.dragAndDropTest[Test From 1 Test 1 Firefox]  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -354,10 +292,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.dragAndDropTest[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.dragAndDropTest[Test From 1 Test 1 Firefox]  Time elapsed: 0.008 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -398,23 +334,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.iFrameTest[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.iFrameTest[Test From 1 Test 1 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -453,10 +375,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.iFrameTest[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.iFrameTest[Test From 1 Test 1 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -497,23 +417,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.navigation_LokatorenTestTablle[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.navigation_LokatorenTestTablle[Test From 1 Test 1 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -552,10 +458,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.navigation_LokatorenTestTablle[Test From 1 Test 1 Firefox]  Time elapsed: 0.002 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.navigation_LokatorenTestTablle[Test From 1 Test 1 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -596,23 +500,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.checkBoxTest[Test From 1 Test 1 Firefox]  Time elapsed: 0 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.checkBoxTest[Test From 1 Test 1 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -651,10 +541,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.checkBoxTest[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.checkBoxTest[Test From 1 Test 1 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -695,23 +583,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.seleniumTestForm1_Ausfullen[Test From 1 Test 1 Firefox]  Time elapsed: 0 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.seleniumTestForm1_Ausfullen[Test From 1 Test 1 Firefox]  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -750,10 +624,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.seleniumTestForm1_Ausfullen[Test From 1 Test 1 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.seleniumTestForm1_Ausfullen[Test From 1 Test 1 Firefox]  Time elapsed: 0.006 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -794,23 +666,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.testRadioButton[Test From 1 Test 2 Firefox]  Time elapsed: 0 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.testRadioButton[Test From 1 Test 2 Firefox]  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -849,10 +707,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.testRadioButton[Test From 1 Test 2 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.testRadioButton[Test From 1 Test 2 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -893,23 +749,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.navigation_SeleniumTestForm1[Test From 1 Test 2 Firefox]  Time elapsed: 0 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.navigation_SeleniumTestForm1[Test From 1 Test 2 Firefox]  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -948,10 +790,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.navigation_SeleniumTestForm1[Test From 1 Test 2 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.navigation_SeleniumTestForm1[Test From 1 Test 2 Firefox]  Time elapsed: 0.006 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -992,23 +832,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.testLogin[Test From 1 Test 2 Firefox]  Time elapsed: 0 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.testLogin[Test From 1 Test 2 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1047,10 +873,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.testLogin[Test From 1 Test 2 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.testLogin[Test From 1 Test 2 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1091,23 +915,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.dragAndDropTest[Test From 1 Test 2 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.dragAndDropTest[Test From 1 Test 2 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1146,10 +956,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.dragAndDropTest[Test From 1 Test 2 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.dragAndDropTest[Test From 1 Test 2 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1190,23 +998,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.iFrameTest[Test From 1 Test 2 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.iFrameTest[Test From 1 Test 2 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1245,10 +1039,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.iFrameTest[Test From 1 Test 2 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.iFrameTest[Test From 1 Test 2 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1289,23 +1081,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.navigation_LokatorenTestTablle[Test From 1 Test 2 Firefox]  Time elapsed: 0 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.navigation_LokatorenTestTablle[Test From 1 Test 2 Firefox]  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1344,10 +1122,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.navigation_LokatorenTestTablle[Test From 1 Test 2 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.navigation_LokatorenTestTablle[Test From 1 Test 2 Firefox]  Time elapsed: 0.006 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1388,23 +1164,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.checkBoxTest[Test From 1 Test 2 Firefox]  Time elapsed: 0 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.checkBoxTest[Test From 1 Test 2 Firefox]  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1443,10 +1205,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.checkBoxTest[Test From 1 Test 2 Firefox]  Time elapsed: 0.001 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.checkBoxTest[Test From 1 Test 2 Firefox]  Time elapsed: 0.004 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1487,23 +1247,9 @@ java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.qui
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-TestAufrufParameterizedFireFox2.seleniumTestForm1_Ausfullen[Test From 1 Test 2 Firefox]  Time elapsed: 0 s  <<< ERROR!
-java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.lambda$new$1(DefaultConfigProperties.java:68)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
-	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.<init>(DefaultConfigProperties.java:67)
-	at io.opentelemetry.sdk.autoconfigure.spi.internal.DefaultConfigProperties.create(DefaultConfigProperties.java:49)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.computeConfigProperties(AutoConfiguredOpenTelemetrySdkBuilder.java:452)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.getConfig(AutoConfiguredOpenTelemetrySdkBuilder.java:446)
-	at io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdkBuilder.build(AutoConfiguredOpenTelemetrySdkBuilder.java:332)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.createTracer(OpenTelemetryTracer.java:81)
-	at org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer.getInstance(OpenTelemetryTracer.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.createExecutor(RemoteWebDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at de.codingsolo.selenium.configuration.AvailableBrowser$1.createDriver(AvailableBrowser.java:22)
-	at de.codingsolo.selenium.configuration.DriverHelper.getDriver(DriverHelper.java:19)
-	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:63)
+TestAufrufParameterizedFireFox2.seleniumTestForm1_Ausfullen[Test From 1 Test 2 Firefox]  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at TestAufrufParameterizedFireFox2.initTests(TestAufrufParameterizedFireFox2.java:64)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1542,10 +1288,8 @@ java.lang.NoClassDefFoundError: io/opentelemetry/api/internal/ConfigUtil
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.lang.ClassNotFoundException: io.opentelemetry.api.internal.ConfigUtil
-	... 53 more
 
-TestAufrufParameterizedFireFox2.seleniumTestForm1_Ausfullen[Test From 1 Test 2 Firefox]  Time elapsed: 0 s  <<< ERROR!
+TestAufrufParameterizedFireFox2.seleniumTestForm1_Ausfullen[Test From 1 Test 2 Firefox]  Time elapsed: 0.006 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
 	at TestAufrufParameterizedFireFox2.afterTests(TestAufrufParameterizedFireFox2.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
